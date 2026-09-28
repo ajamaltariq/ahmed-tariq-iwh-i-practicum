@@ -8,7 +8,6 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// * Please DO NOT INCLUDE the private app access token in your repo. It is loaded from the .env file.
 const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS;
 const CUSTOM_OBJECT_TYPE = process.env.CUSTOM_OBJECT_TYPE;
 const PROPERTIES = ['name', 'platform', 'release_year'];
@@ -58,5 +57,5 @@ app.post('/update-cobj', async (req, res) => {
     }
 });
 
-// * Localhost
+// Localhost
 app.listen(3000, () => console.log('Listening on http://localhost:3000'));
