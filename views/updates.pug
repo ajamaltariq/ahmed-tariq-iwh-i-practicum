@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Add a Video Game
+        a.link(href="/") Return to the homepage
+        .form-wrapper
+            form(action="/update-cobj" method="POST")
+                label(for="name") Name
+                input(type="text" id="name" name="name" required)
+                label(for="platform") Platform
+                input(type="text" id="platform" name="platform" required)
+                label(for="release_year") Release Year
+                input(type="number" id="release_year" name="release_year" min="1950" max="2100" required)
+                input(type="submit" value="Create")
