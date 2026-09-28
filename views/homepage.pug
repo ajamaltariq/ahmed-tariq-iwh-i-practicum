@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Video Games
+        a.link(href="/update-cobj") Add to this table
+        table.cobj-table
+            thead
+                tr
+                    th Name
+                    th Platform
+                    th Release Year
+            tbody
+                each game in data
+                    tr
+                        td= game.properties.name
+                        td= game.properties.platform
+                        td= game.properties.release_year
+                else
+                    tr
+                        td(colspan="3") No video games yet.
