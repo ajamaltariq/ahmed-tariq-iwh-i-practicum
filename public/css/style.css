@@ -56,3 +56,23 @@ input[type="submit"] {
     padding: .375rem 1rem;
     margin-top: 10px;
 }
+.link {
+    display: inline-block;
+    margin: 0 1rem 1rem;
+}
+
+.cobj-table {
+    margin: 0 1rem;
+    border-collapse: collapse;
+}
+
+.cobj-table th {
+    background-color: pink;
+}
+
+.cobj-table th,
+.cobj-table td {
+    border: solid 1px grey;
+    padding: .25rem .5rem;
+    text-align: left;
+}
